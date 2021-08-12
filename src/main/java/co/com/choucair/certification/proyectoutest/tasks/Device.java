@@ -14,6 +14,12 @@ import static co.com.choucair.certification.proyectoutest.userinterface.DevicePa
 
 public class Device implements Task {
 
+    private UtestData utestData;
+
+    public Device(UtestData utestData) {
+        this.utestData = utestData;
+    }
+
     public static Device toSelect(UtestData utestData) {
 
         return Tasks.instrumented(Device.class,utestData);
@@ -23,22 +29,22 @@ public class Device implements Task {
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(Click.on(BUTTON_DEVICES),
                 Click.on(SELECT_PC),
-                Enter.theValue("Windows").into(INPUT_PC),
+                Enter.theValue(utestData.getStrOperatingSystem()).into(INPUT_PC),
                 Hit.the(Keys.ENTER).into(INPUT_PC),
                 Click.on(SELECT_PC_VERSION),
-                Enter.theValue("7").into(INPUT_PC_VERSION),
+                Enter.theValue(utestData.getStrVersionOperatingSystem()).into(INPUT_PC_VERSION),
                 Hit.the(Keys.ENTER).into(INPUT_PC_VERSION),
                 Click.on(SELECT_LENGUAGE),
-                Enter.theValue("Spanish").into(INPUT_LENGUAGE_2),
+                Enter.theValue(utestData.getStrLanguage()).into(INPUT_LENGUAGE_2),
                 Hit.the(Keys.ENTER).into(INPUT_LENGUAGE_2),
                 Click.on(SELECT_MOBILE_DEVICE),
-                Enter.theValue("Alcatel").into(INPUT_MOBILE_DEVICE),
+                Enter.theValue(utestData.getStrBrandMobil()).into(INPUT_MOBILE_DEVICE),
                 Hit.the(Keys.ENTER).into(INPUT_MOBILE_DEVICE),
                 Click.on(SELECT_MOBILE_MODEL),
-                Enter.theValue("Crystal").into(INPUT_MOBILE_MODEL),
+                Enter.theValue(utestData.getStrVersionMobil()).into(INPUT_MOBILE_MODEL),
                 Hit.the(Keys.ENTER).into(INPUT_MOBILE_MODEL),
                 Click.on(SELECT_MOBILE_OS),
-                Enter.theValue("Android 7.0").into(INPUT_MOBILE_OS),
+                Enter.theValue(utestData.getStrOperatingSystemMobil()).into(INPUT_MOBILE_OS),
                 Hit.the(Keys.ENTER).into(INPUT_MOBILE_OS)
 
 

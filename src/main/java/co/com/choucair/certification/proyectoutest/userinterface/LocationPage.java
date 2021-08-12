@@ -7,8 +7,6 @@ public class LocationPage {
 
     public static final Target BUTTON_LOCATION = Target.the("button next location")
             .located(By.xpath("//a[@aria-label='Next step - define your location']"));
-    /*public static final Target SELECT_CITY = Target.the("were we write the city")
-            .located(By.id("city"));*/
     public static final Target INPUT_CITY = Target.the("were we write the city")
             .located(By.id("city"));
     public static final Target INPUT_POSTAL_CODE = Target.the("were we write the postal zone")
