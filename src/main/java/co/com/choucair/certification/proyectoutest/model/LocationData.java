@@ -29,4 +29,5 @@ public class LocationData {
     public void setStrCountry(String strCountry) {
         this.strCountry = strCountry;
     }
+
 }

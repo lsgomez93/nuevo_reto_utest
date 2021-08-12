@@ -6,13 +6,13 @@ import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Open;
 
-public class OpenUp implements Task {
+public class OpenUpUtest implements Task {
 
     private UtestPage utestPage;
 
-    public static OpenUp thePage() {
+    public static OpenUpUtest thePage() {
 
-        return Tasks.instrumented(OpenUp.class);
+        return Tasks.instrumented(OpenUpUtest.class);
     }
 
     @Override
