@@ -3,7 +3,7 @@ package co.com.choucair.certification.proyectoutest.userinterface;
 import net.serenitybdd.screenplay.targets.Target;
 import org.openqa.selenium.By;
 
-public class SecurityInformationPage {
+public class EnterTheSecurityInformationPage {
 
     public static final Target BUTTON_lAST_STEP = Target.the("button next location")
             .located(By.xpath("//*[@id=\"regs_container\"]/div/div[2]/div/div[2]/div/div[2]/div/a/span"));

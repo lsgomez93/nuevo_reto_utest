@@ -1,6 +1,6 @@
 package co.com.choucair.certification.proyectoutest.question;
 
-import co.com.choucair.certification.proyectoutest.userinterface.SecurityInformationPage;
+import co.com.choucair.certification.proyectoutest.userinterface.EnterTheSecurityInformationPage;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
 import net.serenitybdd.screenplay.questions.Text;
@@ -21,7 +21,7 @@ public class Answer implements Question<Boolean> {
     public Boolean answeredBy(Actor actor) {
         boolean result;
 
-        String mensajeWelcome = Text.of(SecurityInformationPage.NAME_MESSAGE_WELCOME).viewedBy(actor).asString();
+        String mensajeWelcome = Text.of(EnterTheSecurityInformationPage.NAME_MESSAGE_WELCOME).viewedBy(actor).asString();
 
         if (question.equals(mensajeWelcome)) {
             result = true;

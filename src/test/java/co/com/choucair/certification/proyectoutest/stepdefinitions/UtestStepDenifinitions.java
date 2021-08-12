@@ -28,10 +28,11 @@ public class UtestStepDenifinitions {
 
     @When("^she enter the data of the New User$")
     public void sheEnterTheDataOfTheNewUser(List<UtestData> utestData)throws Exception {
-        theActorInTheSpotlight().attemptsTo(PersonalInformation.ToRegister(utestData.get(0)),
-                Location.enter(utestData.get(0)),
-                Device.toSelect(utestData.get(0)),
-                SecurityInformation.define(utestData.get(0))
+        theActorInTheSpotlight().attemptsTo(
+                FillOut.thePersonalData(utestData.get(0)),
+                Registre.theLocationData(utestData.get(0)),
+                Enter.theInformationOfDevice(utestData.get(0)),
+                EnterThe.informationOfSecurity(utestData.get(0))
                 );
     }
     @Then("^she gets the new user and show welcome page(.*)$")

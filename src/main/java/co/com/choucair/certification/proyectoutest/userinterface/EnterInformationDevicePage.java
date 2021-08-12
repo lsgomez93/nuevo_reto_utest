@@ -3,7 +3,7 @@ package co.com.choucair.certification.proyectoutest.userinterface;
 import net.serenitybdd.screenplay.targets.Target;
 import org.openqa.selenium.By;
 
-public class DevicePage {
+public class EnterInformationDevicePage {
 
     public static final Target SELECT_PC = Target.the("were we select your OS compute")
             .located(By.xpath("//*[@id=\"web-device\"]/div[1]/div[2]/div"));

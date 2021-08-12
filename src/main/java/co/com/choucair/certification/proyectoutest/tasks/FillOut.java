@@ -9,19 +9,19 @@ import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.screenplay.actions.SelectFromOptions;
 
-import static co.com.choucair.certification.proyectoutest.userinterface.PersonalInformationPage.*;
+import static co.com.choucair.certification.proyectoutest.userinterface.FillOutPersonalDataPage.*;
 
-public class PersonalInformation implements Task {
+public class FillOut implements Task {
 
     private UtestData utestData;
 
-    public PersonalInformation(UtestData utestData) {
+    public FillOut(UtestData utestData) {
         this.utestData = utestData;
     }
 
-    public static PersonalInformation ToRegister(UtestData utestData) {
+    public static FillOut thePersonalData(UtestData utestData) {
 
-        return Tasks.instrumented(PersonalInformation.class, utestData);
+        return Tasks.instrumented(FillOut.class, utestData);
     }
 
     @Override

@@ -3,7 +3,7 @@ package co.com.choucair.certification.proyectoutest.userinterface;
 import net.serenitybdd.screenplay.targets.Target;
 import org.openqa.selenium.By;
 
-public class PersonalInformationPage {
+public class FillOutPersonalDataPage {
 
     public static final Target BUTTON_JOIN = Target.the("button get form registred")
             .located(By.xpath("//a[@class='unauthenticated-nav-bar__sign-up']"));

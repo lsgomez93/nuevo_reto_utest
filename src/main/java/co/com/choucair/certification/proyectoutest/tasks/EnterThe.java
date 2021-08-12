@@ -6,19 +6,19 @@ import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
-import static co.com.choucair.certification.proyectoutest.userinterface.SecurityInformationPage.*;
+import static co.com.choucair.certification.proyectoutest.userinterface.EnterTheSecurityInformationPage.*;
 
-public class SecurityInformation implements Task {
+public class EnterThe implements Task {
 
     private UtestData utestData;
 
-    public SecurityInformation(UtestData utestData) {
+    public EnterThe(UtestData utestData) {
         this.utestData = utestData;
     }
 
-    public static SecurityInformation define(UtestData utestData) {
+    public static EnterThe informationOfSecurity(UtestData utestData) {
 
-        return Tasks.instrumented(SecurityInformation.class,utestData);
+        return Tasks.instrumented(EnterThe.class,utestData);
     }
 
     @Override

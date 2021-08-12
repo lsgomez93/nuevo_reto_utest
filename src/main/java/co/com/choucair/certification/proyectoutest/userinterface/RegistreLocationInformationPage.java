@@ -3,7 +3,7 @@ package co.com.choucair.certification.proyectoutest.userinterface;
 import net.serenitybdd.screenplay.targets.Target;
 import org.openqa.selenium.By;
 
-public class LocationPage {
+public class RegistreLocationInformationPage {
 
     public static final Target BUTTON_LOCATION = Target.the("button next location")
             .located(By.xpath("//a[@aria-label='Next step - define your location']"));

@@ -10,18 +10,18 @@ import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.screenplay.actions.Hit;
 import org.openqa.selenium.Keys;
 
-import static co.com.choucair.certification.proyectoutest.userinterface.LocationPage.*;
+import static co.com.choucair.certification.proyectoutest.userinterface.RegistreLocationInformationPage.*;
 
-public class Location implements Task {
+public class Registre implements Task {
     private UtestData utestData;
 
-    public Location(UtestData utestData) {
+    public Registre(UtestData utestData) {
         this.utestData = utestData;
     }
 
-    public static Location enter(UtestData utestData) {
+    public static Registre theLocationData(UtestData utestData) {
 
-        return Tasks.instrumented(Location.class, utestData);
+        return Tasks.instrumented(Registre.class, utestData);
     }
 
     @Override
